@@ -1,13 +1,18 @@
 import pandas as pd
 def load_data():
-    df=pd.read_csv("C:/Users/lenovo/PycharmProjects/PlacementPredictionSystem/data/placement_data.csv")
+    df = pd.read_csv("C:/Users/svmah/PycharmProjects/PythonProject4/PlacementPredictionSystem/data/placement_data.csv")
     return df
 def get_summary(df):
-    return {
+    return{
         "rows": df.shape[0],
         "columns": df.shape[1],
-        "target": "PlacementStatus"
+        "target": "Placement Status"
     }
 if __name__ == "__main__":
     df=load_data()
     print(get_summary(df))
+    # print(df.head())
+    #print(df.info())
+    #print(df.describe())
+    #print(df.isnull().sum())
+    
